@@ -18,17 +18,17 @@ I tested two different chunk sizes in `test_questions.py` to see how retrieval q
 
 - **Setting 1: Small Chunks (400 characters, 80 overlap)**
   - *Result*: Good for simple, single-line questions (like office timings). The retrieved passage was short and straight to the point.
-  - *Downside*: When a topic had multiple bullet points (like README requirements), a small chunk sometimes cut off the text mid-sentence.
+  - *Downside*: When a topic had multiple bullet points (like documentation guidelines), a small chunk sometimes cut off the text mid-sentence.
 
 - **Setting 2: Large Chunks (800 characters, 150 overlap)**
   - *Result*: Better for questions that need full context. Entire paragraphs and headings stayed together, giving the LLM all necessary details.
-  - *Final Choice*: **800 characters** was chosen as the default because student handbook rules are clearer when read with their surrounding context.
+  - *Final Choice*: **800 characters** was chosen as the default because handbook and document guidelines are clearer when read with their surrounding context.
 
 ---
 
 ### 3. Grounding & Handling Out-of-Scope Questions
 - **Rule**: The prompt strictly instructs the model: if the answer is not in the retrieved passages, say *"Information not available in the document."*
-- **Test**: Question 5 asked for the upcoming workshop date and venue (which does not exist in the handbook).
+- **Test**: Question 5 asked for upcoming workshop details and lead names that are not in the document.
 - **Result**: The model correctly replied that the information is not available, instead of guessing or making up dates.
 
 ---

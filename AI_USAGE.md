@@ -1,11 +1,11 @@
 # AI Usage Declaration (AI_USAGE.md)
 
-In line with the project guidelines, here is a clear summary of how AI tools were used in this task:
+Here is a clear summary of how AI tools were used in this project:
 
 ---
 
 ### 1. Tools Used
-- **AI Assistant**: Google Antigravity (Gemini 3.8 Flash).
+- **AI Assistant**: Gemini
 - **Core LLM**: Google Gemini 3 Flash Preview (`gemini-3-flash-preview`) via Google AI Studio.
 
 ---
